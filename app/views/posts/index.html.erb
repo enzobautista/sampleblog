@@ -1,0 +1,31 @@
+<section class="container-fluid landing">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="picture" >
+        </div>
+        <div class="card-text">
+        <b><%= post.title %></b> <br>
+        <%= post.description %> <br>
+        <%= link_to 'Edit', edit_post_path(post) %> | 
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
